@@ -82,3 +82,11 @@ mysql> select * from actor limit 5;
 mysql> exit;
 Bye
 ```
+
+## Fonction `count` :
+
+Elle ne prends pas en compte les valeurs nulles.
+
+Elle s'utilise également également avec le mot clé `distinct` :  
+`select count(distinct colonne) from table`
+
