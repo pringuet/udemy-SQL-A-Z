@@ -83,10 +83,24 @@ mysql> exit;
 Bye
 ```
 
-## Fonction `count` :
+## Count :
 
 Elle ne prends pas en compte les valeurs nulles.
 
 Elle s'utilise également également avec le mot clé `distinct` :  
-`select count(distinct colonne) from table`
+`select count(distinct first_name) from customer;`
+
+## Order By :
+`order by` peut s'appliquer sur des champs non visible dans le tableau des résultats :  
+`select first_name from customer order by last_name desc;`
+
+## Like :
+Le `%` remplace une chaîne de caractères :  
+`select first_name, last_name from customer where first_name like 'BAR%A';`  
+BARBARA	JONES
+
+Le `_` remplace un caractère  
+`select first_name, last_name from customer where first_name like '_A%ARA';`  
+BARBARA	JONES  
+TAMARA	NGUYEN
 
